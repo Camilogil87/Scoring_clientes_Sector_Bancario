@@ -1,0 +1,72 @@
+"id_final","id_campanya","s_final","s_grupo_final"
+0,100000023,Otras causas,Finales de sistema
+1,100000023,No Contestan,Finales de sistema
+2,100000023,No hay trunks,Finales de sistema
+3,100000023,No hay tono,Finales de sistema
+4,100000023,No hay Ring Back,Finales de sistema
+5,100000023,Comunican,Finales de sistema
+6,100000023,Línea Muerta,Finales de sistema
+7,100000023,Congestión,Finales de sistema
+8,100000023,Sin agentes disponibles,Finales de sistema
+9,100000023,Modem / Fax,Finales de sistema
+10,100000023,Abandonada,Finales de sistema
+11,100000023,Error en transferencia,Finales de sistema
+12,100000023,Error CTI,Finales de sistema
+13,100000023,La llam.no puede alcanzar des,Finales de sistema
+14,100000023,Finalizada por el sistema,Finales de sistema
+15,100000023,Teléfono no válido,Finales de sistema
+16,100000023,Descartada por Usuario,Finales de sistema
+17,100000023,Fuera Intervalo Rellamada,Finales de sistema
+18,100000023,Agente asignado no está activ,Finales de sistema
+19,100000023,Contestador Automático,Finales de sistema
+20,100000023,Envío fallido,Finales de sistema
+21,100000023,Envío realizado,Finales de sistema
+22,100000023,No Llamable,Finales de sistema
+23,100000023,Cola cerrada,Finales de sistema
+24,100000023,Cola saturada,Finales de sistema
+25,100000023,Do Not Call,Finales de sistema
+26,100000023,Transferencia,Finales de sistema
+27,100000023,Tiempo Administrativo Excedid,
+100,100000023,SIN TRATAR,
+190,100000023,Cerrar Busqueda,
+200,100000023,Volver a llamar argumentado,
+201,100000023,Volver a llamar no argumentad,
+202,100000023,Repro no argumentado semana,
+203,100000023,Volver a llamar no programado,
+300,100000023,Teléfono erróneo,
+301,100000023,Ilocalizable,
+302,100000023,Fallecido,
+303,100000023,Fax,
+304,100000023,Barreras comunicación,
+306,100000023,Alcanzado MNI sin contacto,
+307,100000023,Alcanzado MNI con contacto,
+308,100000023,Ya gestionado,
+309,100000023,No acepta grabación,
+310,100000023,Descartado por Bankinter,
+311,100000023,Final de campaña ilocalizable,
+312,100000023,Cliente empresa,
+400,100000023,Intereses elevados,
+401,100000023,Saldo disponible insuficiente,
+402,100000023,Forma de pago al contado,
+403,100000023,No necesita efectivo,
+404,100000023,Saldo disponible menor a 50€,
+405,100000023,Descontento con BankinterCard,
+406,100000023,No colabora,
+407,100000023,Tarjeta apagada,
+408,100000023,No quiere TLMK/prefiere gesto,
+409,100000023,No volver a ofrecer,
+410,100000023,SC con otra tarjeta diferente,
+411,100000023,No disponible en Engloba,
+412,100000023,Dice no ser cliente,
+414,100000023,Alcanzado MNI con vlla,
+415,100000023,Venta no pasa validación,
+450,100000023,Call me back,
+451,100000023,Final de campaña,
+500,100000023,Contrata online,
+501,100000023,Contrata M50,
+600,100000023,Contrata por su cuenta,
+601,100000023,Interesado devuelto,
+602,100000023,Final de campaña interesado,
+502,100000023,Contrata DL,
+204,100000023,Volver a llamar completa vent,
+416,100000023,Venta sin traspaso,

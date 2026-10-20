@@ -1,0 +1,62 @@
+"id_estado_negocio","id_campanya","id_final","s_final"
+SISTEMA,100000023,0,Otras causas
+SISTEMA,100000023,1,No Contestan
+SISTEMA,100000023,2,No hay trunks
+SISTEMA,100000023,3,No hay tono
+SISTEMA,100000023,4,No hay Ring Back
+SISTEMA,100000023,5,Comunican
+SISTEMA,100000023,6,Línea Muerta
+SISTEMA,100000023,7,Congestión
+SISTEMA,100000023,8,Sin agentes disponibles
+SISTEMA,100000023,9,Modem / Fax
+SISTEMA,100000023,10,Abandonada
+SISTEMA,100000023,11,Error en transferencia
+SISTEMA,100000023,12,Error CTI
+SISTEMA,100000023,13,La llam.no puede alcanzar des
+SISTEMA,100000023,14,Finalizada por el sistema
+SISTEMA,100000023,15,Teléfono no válido
+SISTEMA,100000023,16,Descartada por Usuario
+REPROGRAMADO,100000023,17,Fuera Intervalo Rellamada
+SISTEMA,100000023,18,Agente asignado no está activ
+SISTEMA,100000023,19,Contestador Automático
+SISTEMA,100000023,20,Envío fallido
+SISTEMA,100000023,21,Envío realizado
+SISTEMA,100000023,22,No Llamable
+SISTEMA,100000023,23,Cola cerrada
+SISTEMA,100000023,24,Cola saturada
+SISTEMA,100000023,25,Do Not Call
+SISTEMA,100000023,26,Transferencia
+SISTEMA,100000023,27,Tiempo Administrativo Excedid
+INICIAL,100000023,100,SIN TRATAR
+,100000023,190,Cerrar Busqueda
+REPROGRAMADO ARGUMENTADO,100000023,200,Volver a llamar argumentado
+REPROGRAMADO,100000023,201,Volver a llamar no argumentad
+REPROGRAMADO,100000023,202,Repro no argumentado semana
+REPROGRAMADO,100000023,203,Volver a llamar no programado
+NULO,100000023,300,Teléfono erróneo
+NULO,100000023,301,Ilocalizable
+NULO,100000023,302,Fallecido
+NULO,100000023,303,Fax
+NULO,100000023,304,Barreras comunicación
+NULO,100000023,306,Alcanzado MNI sin contacto
+NULO,100000023,307,Alcanzado MNI con contacto
+NULO,100000023,308,Ya gestionado
+NULO,100000023,309,No acepta grabación
+NULO,100000023,310,Descartado por Bankinter
+NULO,100000023,311,Final de campaña ilocalizable
+NEGATIVO,100000023,400,Intereses elevados
+NEGATIVO,100000023,401,Saldo disponible insuficiente
+NEGATIVO,100000023,403,No necesita efectivo
+NEGATIVO,100000023,405,Descontento con BankinterCard
+NEGATIVO,100000023,406,No colabora
+NEGATIVO,100000023,409,No volver a ofrecer
+NEGATIVO,100000023,414,Alcanzado MNI con vlla
+NEGATIVO,100000023,415,Venta no pasa validación
+REPROGRAMADO,100000023,450,Call me back
+NEGATIVO,100000023,451,Final de campaña
+POSITIVO,100000023,500,Contrata online
+POSITIVO,100000023,501,Contrata M50
+POSITIVO,100000023,600,Contrata por su cuenta
+POSITIVO,100000023,502,Contrata DL
+REPROGRAMADO,100000023,204,Volver a llamar completa vent
+NEGATIVO,100000023,416,Venta sin traspaso

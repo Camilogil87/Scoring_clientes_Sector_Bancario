@@ -1,0 +1,81 @@
+ -- Todos los finales Credimax 
+select f2.id_final,f2.id_campanya , f2.s_final,f2.s_grupo_final  
+from data_warehouse.dw_tlmk_final f2
+ inner join  (
+ 	select id_final , id_campanya ,max(version) as max_version 
+ 	  from data_warehouse.dw_tlmk_final
+ 	  where id_campanya= 100000023
+ 	 group by 1,2) f4 on (f2.id_final = f4.id_final
+ 	 and f2.version = f4.max_version
+ 	 and f2.id_campanya=f4.id_campanya)
+
+-- Seleccionar clientes en campaña CMax en 2022
+SELECT pc1.id_persona, pc1.t_inicio_validez, pc1.t_final_validez, pc1.id_final,pc1.t_contacto_proximo ,pc1.t_contacto_ultimo ,pc1.t_intento_contacto_ultimo ,
+pc1.n_contactos_max ,pc1.n_contactos_pendientes ,pc1.id_estado_registro ,pc1.n_contactos_realizados ,pc1.n_intentos_contacto_realizados ,pc1.n_segundos_consumidos,
+pc1.n_finales_consecutivos 
+  from data_warehouse.dw_tlmk_persona_campanya pc1
+ inner join (
+ 	select id_persona, id_campanya, max(version) as max_version
+ 	  from data_warehouse.dw_tlmk_persona_campanya
+ 	 where id_campanya = 100000023
+ 	 group by 1,2) pc2 on (
+ 	 pc1.id_persona  = pc2.id_persona
+ 	 and pc1.id_campanya  = pc2.id_campanya
+ 	 and pc1.version = pc2.max_version)
+ where pc1.t_inicio_validez >= '2022-07-01'
+
+
+-- Datos de persona id_persona tabla
+ select DISTINCT p1.id_persona, p1.s_codigo_postal, p1.t_nacimiento ,p1.s_sexo ,p1.s_poblacion  
+  from data_warehouse.dw_tlmk_persona p1
+ inner join  (
+ 	select id_persona, max(version) as max_version 
+ 	  from data_warehouse.dw_tlmk_persona
+ 	 group by 1) p2 on (p1.id_persona = p2.id_persona
+ 	 and p1.version = p2.max_version)
+ 	 inner join data_warehouse.dw_tlmk_persona_campanya pc2 on p1.id_persona = pc2.id_persona 
+ 	 where pc2.id_campanya = 100000023 
+ 	 and pc2.t_inicio_validez >= '2022-07-01'
+
+
+-- CMAX venta
+select DISTINCT v1.id_persona ,v1.d_venta ,v1.imp_venta ,v1.id_final ,v1.ind_anulada_cliente ,v1.d_cancelacion ,v1.n_dias_cancelacion 
+  from data_analytics.tlmk_bkcf_cmax_venta v1
+ inner join (
+ 	select id_bkcf_cmax_venta, max(version) as max_version
+ 	  from data_analytics.tlmk_bkcf_cmax_venta tbcv 
+ 	 group by 1) v2 on (v1.id_bkcf_cmax_venta = v2.id_bkcf_cmax_venta
+ 	 and v1.version = v2.max_version) 
+     inner join data_warehouse.dw_tlmk_persona_campanya pc2 on v1.id_persona = pc2.id_persona 
+ 	 where pc2.id_campanya = 100000023 
+ 	 and pc2.t_inicio_validez >= '2022-07-01'
+ 	 and v1.version_borrado = false
+
+
+-- Persona_datos consulta variables
+select DISTINCT pd1.id_persona, pd1.s_clave, pd1.s_valor 
+  from data_warehouse.dw_tlmk_persona_datos pd1
+ inner join (
+ 	select id_persona, s_clave, max(version) as max_version
+ 	  from data_warehouse.dw_tlmk_persona_datos dtpd 
+ 	 group by 1,2) pd2 on (pd1.id_persona = pd2.id_persona
+ 	 and pd1.s_clave = pd2.s_clave
+ 	 and pd1.version = pd2.max_version)
+     inner join data_warehouse.dw_tlmk_persona_campanya pc2 on pd1.id_persona = pc2.id_persona 
+ 	 where pc2.id_campanya = 100000023 
+ 	 and pc2.t_inicio_validez >= '2022-07-01'
+     and pd1.s_clave in ('fechaUltimoCmax','limiteTarjeta','limiteCmax','importeUltimoCmax','fechaAltaCuenta')
+
+-- Importe solicitado
+ select DISTINCT pd1.id_persona, pd1.s_clave, pd1.s_valor 
+  from data_warehouse.dw_tlmk_persona_datos pd1
+ inner join (
+ 	select id_persona, s_clave, max(version) as max_version
+ 	  from data_warehouse.dw_tlmk_persona_datos dtpd 
+ 	 group by 1,2) pd2 on (pd1.id_persona = pd2.id_persona
+ 	 and pd1.s_clave = pd2.s_clave
+ 	 and pd1.version = pd2.max_version)
+ 	 inner join data_warehouse.dw_tlmk_persona_campanya pc2 on pd1.id_persona = pc2.id_persona 
+ 	 where pc2.id_campanya = 100000023 
+ 	 and pc2.t_inicio_validez >= '2022-07-01'
+     and pd1.s_clave in ('importe_solicitado')
